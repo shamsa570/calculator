@@ -1,0 +1,101 @@
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f7;
+  color:#E0F7FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+.calculator {
+  background: linear-gradient(to bottom, #b3b6b7, #b3b6b7); /* Gradient background for calculator */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  padding: 20px;
+  color: white;
+}
+
+/* Display Section */
+.display {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+#result {
+  width: 97%;
+  height: 60px;
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  margin-right: 40px;
+  border-radius: 10px;
+  background-color: #fdfdfd ;
+  color: #000000;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Section */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  background: #f9fbe7;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+  background: #c5e1a5;
+  transform: scale(1.05);
+}
+
+/* Operator and Special Buttons */
+.operator {
+  background-color: #ffa726;
+  color: #fff;
+}
+
+.operator:hover {
+  background-color: #fb8c00;
+}
+
+.equal {
+  background-color: #29b6f6;
+  color: white;
+}
+
+.equal:hover {
+  background-color: #0288d1;
+}
+
+.clear {
+  background-color: #ef5350;
+  color: white;
+}
+
+.clear:hover {
+  background-color: #d32f2f;
+}
+
+.function {
+  background-color: #8e24aa;
+  color: white;
+}
+
+.function:hover {
+  background-color: #6a1b9a;
+}
