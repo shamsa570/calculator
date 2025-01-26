@@ -3,53 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scientific Calculator</title>
+    <title>Image Gallery</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="calculator">
-      <div class="display">
-        <input type="text" id="result" placeholder="0" disabled />
+    <div class="gallery-container">
+      <h1>Image Gallery</h1>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="images/a11" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a4.jpg" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a5.jpg" alt="Image 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a6.jpg" alt="Image 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a7.jpg" alt="Image 3" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a1.jpg" alt="Image 4" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a2.jpg" alt="Image 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a3.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a9.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a10.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a11" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a12" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a13.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a14" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a15.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a16.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a17.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a18" alt="Image 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/a19.jpg" alt="Image 6" />
+        </div>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="images/a11" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/a4.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/a5.jpg" alt="Image 1" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/a6.jpg" alt="Image 2" />
+          </div>
+          <div class="gallery-item">
+            <img src="images/a7.jpg" alt="Image 3" />
+          </div>
+        <div class="gallery-item">
+          <img src="images/a20" alt="Image 6" />
+        </div>
       </div>
-
-      <div class="buttons">
-        <!-- Clear and Delete -->
-        <button class="btn clear" onclick="clearScreen()">C</button>
-        <button class="btn" onclick="deleteChar()">⌫</button>
-
-        <!-- Parentheses -->
-        <button class="btn" onclick="appendChar('(')">(</button>
-        <button class="btn" onclick="appendChar(')')">)</button>
-
-   
-        <button class="btn" onclick="appendChar('7')">7</button>
-        <button class="btn" onclick="appendChar('8')">8</button>
-        <button class="btn" onclick="appendChar('9')">9</button>
-        <button class="btn operator" onclick="appendChar('+')">+</button>
-
-        <button class="btn" onclick="appendChar('4')">4</button>
-        <button class="btn" onclick="appendChar('5')">5</button>
-        <button class="btn" onclick="appendChar('6')">6</button>
-        <button class="btn operator" onclick="appendChar('-')">-</button>
-
-        <button class="btn" onclick="appendChar('1')">1</button>
-        <button class="btn" onclick="appendChar('2')">2</button>
-        <button class="btn" onclick="appendChar('3')">3</button>
-        <button class="btn operator" onclick="appendChar('*')">*</button>
-
-        <button class="btn" onclick="appendChar('0')">0</button>
-        <button class="btn" onclick="appendChar('.')">.</button>
-        <button class="btn equal" onclick="calculate()">=</button>
-        <button class="btn operator" onclick="appendChar('/')">/</button>
-
-  
-        <button class="btn function" onclick="sinFunction()">sin</button>
-        <button class="btn function" onclick="cosFunction()">cos</button>
-        <button class="btn function" onclick="tanFunction()">tan</button>
-        <button class="btn function" onclick="cotFunction()">cot</button>
-      </div>
+    
     </div>
-
+      <div class="navigation">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+      </div>
     <script src="js/script.js"></script>
   </body>
 </html>
