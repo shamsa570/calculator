@@ -1,57 +1,38 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+  let currentPage = 0; 
+  const itemsPerPage = 10; 
 
-function clearScreen() {
-  document.getElementById('result').value = '';
-}
-
-
-function deleteChar() {
-  const result = document.getElementById('result');
-  result.value = result.value.slice(0, -1);
-}
-
-
-function appendChar(char) {
-  document.getElementById('result').value += char;
-}
-
-
-function calculate() {
-  const result = document.getElementById('result');
-  
-  
-  let expression = result.value;
-
-  expression = expression.replace(/sin\(([^)]+)\)/g, (match, p1) => `Math.sin(${p1 * Math.PI / 180})`);
-  expression = expression.replace(/cos\(([^)]+)\)/g, (match, p1) => `Math.cos(${p1 * Math.PI / 180})`);
-  expression = expression.replace(/tan\(([^)]+)\)/g, (match, p1) => `Math.tan(${p1 * Math.PI / 180})`);
-  expression = expression.replace(/cot\(([^)]+)\)/g, (match, p1) => `1 / Math.tan(${p1 * Math.PI / 180})`);
-
-  try {
-
-    let calcResult = eval(expression); 
-
-  
-    calcResult = Math.round(calcResult * 1e6) / 1e6;  
-
-    result.value = calcResult;
-  } catch (error) {
-    result.value = 'Error';
-  }
-}
+ 
+  const updateGallery = () => {
+    galleryItems.forEach((item, index) => {
+   
+      if (
+        index >= currentPage * itemsPerPage &&
+        index < (currentPage + 1) * itemsPerPage
+      ) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  };
 
 
-function sinFunction() {
-  appendChar('sin(');  
-}
+  document.getElementById("next").addEventListener("click", () => {
+    if ((currentPage + 1) * itemsPerPage < galleryItems.length) {
+      currentPage++;
+      updateGallery();
+    }
+  });
 
-function cosFunction() {
-  appendChar('cos('); 
-}
+ 
+  document.getElementById("prev").addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateGallery();
+    }
+  });
 
-function tanFunction() {
-  appendChar('tan(');  // Append "tan(" to input
-}
-
-function cotFunction() {
-  appendChar('cot(');  // Append "cot(" to input
-}
+  updateGallery();
+});
